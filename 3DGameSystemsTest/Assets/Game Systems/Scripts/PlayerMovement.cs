@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Character Speeds")]
 
-    public float speed = 5f;
-    public float jumpSpeed = 8f, gravity = 20f, crouch = 2.5f, walk = 5f, run = 10f;
+    public float speed = 50f;
+    public float jumpSpeed = 50f, gravity = 20f, crouch = 2.5f, walk = 50f, run = 10f;
     
     #endregion
 
