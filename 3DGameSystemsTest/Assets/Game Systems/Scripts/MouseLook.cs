@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+
 [AddComponentMenu("Game Systems/Player/Mouse Look")]
 
 public class MouseLook : MonoBehaviour
@@ -68,17 +69,4 @@ public class MouseLook : MonoBehaviour
         #endregion
     }
     #endregion
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
