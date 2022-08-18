@@ -53,14 +53,17 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game Systems\Scripts\Player\Interact.cs" />
     <Compile Include="Assets\Examples\Scripts\TransformMovement.cs" />
     <Compile Include="Assets\Examples\Scripts\TowardsMovement.cs" />
     <Compile Include="Assets\Examples\Scripts\ControllerMovement.cs" />
-    <Compile Include="Assets\Game Systems\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Game Systems\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Examples\Scripts\ForceMovement.cs" />
     <Compile Include="Assets\Examples\Scripts\VelocityMovement.cs" />
-    <Compile Include="Assets\Game Systems\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Game Systems\Scripts\Interact.cs" />
+    <Compile Include="Assets\Game Systems\Scripts\Player\MouseLook.cs" />
+    <Compile Include="Assets\Game Systems\Scripts\NPC\Dialogue.cs" />
+    <Compile Include="Assets\Game Systems\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Game Systems\Scripts\UI_Manager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Enemies\Bases\GoblinSlingshot\Shader\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
