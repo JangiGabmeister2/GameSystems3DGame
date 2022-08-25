@@ -23,7 +23,7 @@ public class UI_Manager : MonoBehaviour
             //else if instance is not the same instance as the value
             else if (_uiManagerInstance != value)
             {
-                Debug.Log($"{nameof(UI_Manager)} instance already exists. Destroy the duplicate. [Highlander quote]");
+                Debug.Log($"{nameof(UI_Manager)} instance already exists. Destroy the duplicate. [insert Highlander quote]");
                 Destroy(value);
             }
         }
@@ -43,15 +43,15 @@ public class UI_Manager : MonoBehaviour
         uiManagerInstance = this;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        //set up screen size
+        UpdateUIScale();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //set up screen size
+        UpdateUIScale();
     }
 }

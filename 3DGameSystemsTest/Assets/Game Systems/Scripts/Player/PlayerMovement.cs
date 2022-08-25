@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 50f;
     public float jumpSpeed = 50f, gravity = 20f, crouch = 2.5f, walk = 50f, run = 10f;
-    
+
     #endregion
 
     void Start()
@@ -27,19 +27,25 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (_charC.isGrounded)
+        //if in game state, movement is normal
+        if (GameManager.GameManagerInstance.gameState == GameStates.GameState)
         {
-            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDir = transform.TransformDirection(moveDir);
-            moveDir *= speed;
-
-            if (Input.GetButton("Jump"))
+            #region Movement
+            if (_charC.isGrounded)
             {
-                moveDir.y = jumpSpeed;
-            }
-        }
+                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDir = transform.TransformDirection(moveDir);
+                moveDir *= speed;
 
-        moveDir.y -= gravity * Time.deltaTime;
-        _charC.Move(moveDir * Time.deltaTime);
+                if (Input.GetButton("Jump"))
+                {
+                    moveDir.y = jumpSpeed;
+                }
+            }
+
+            moveDir.y -= gravity * Time.deltaTime;
+            _charC.Move(moveDir * Time.deltaTime);
+            #endregion
+        }
     }
 }

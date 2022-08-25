@@ -44,29 +44,33 @@ public class MouseLook : MonoBehaviour
     #region Update
     private void Update()
     {
-        #region Mouse X
-        if (axis == RotationalAxis.MouseX)
+        //if in game state, mouse look is normal
+        if (GameManager.GameManagerInstance.gameState == GameStates.GameState)
         {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity.x, 0);
-        }
-
-        #endregion
-        #region Mouse Y
-        else
-        {
-            _rotY += Input.GetAxis("Mouse Y") * sensitivity.y;
-            _rotY = Mathf.Clamp(_rotY, minY, maxY);
-
-            if (!invert)
+            #region Mouse X
+            if (axis == RotationalAxis.MouseX)
             {
-                transform.localEulerAngles = new Vector3(-_rotY, 0, 0);
+                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity.x, 0);
             }
+
+            #endregion
+            #region Mouse Y
             else
             {
-                transform.localEulerAngles = new Vector3(_rotY, 0, 0);
+                _rotY += Input.GetAxis("Mouse Y") * sensitivity.y;
+                _rotY = Mathf.Clamp(_rotY, minY, maxY);
+
+                if (!invert)
+                {
+                    transform.localEulerAngles = new Vector3(-_rotY, 0, 0);
+                }
+                else
+                {
+                    transform.localEulerAngles = new Vector3(_rotY, 0, 0);
+                }
             }
+            #endregion
         }
-        #endregion
     }
     #endregion
 }
