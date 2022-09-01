@@ -441,8 +441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 495167087}
   - component: {fileID: 495167086}
-  - component: {fileID: 495167085}
-  - component: {fileID: 495167088}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -450,19 +448,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &495167085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495167084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ddd70d33750c54e994125480502f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameState: 1
 --- !u!114 &495167086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,9 +457,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 495167084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de08e1ea48375c94d9f8c02b3d56da94, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ff253cd18f968b4088d7758b78b7ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 1
 --- !u!4 &495167087
 Transform:
   m_ObjectHideFlags: 0
@@ -489,18 +475,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &495167088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495167084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97134ca34ce32ba4696f1ad82331960d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &501553897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a5e7028fb55633a4887688fc6d625822, type: 3}
@@ -584,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5e7028fb55633a4887688fc6d625822, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5e7028fb55633a4887688fc6d625822, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1181,16 +1155,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164386662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74b6bd2aed989f42bf0298c10f6d927, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d1c87f69d0eba04298c8f736f5647e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveDir: {x: 0, y: 0, z: 0}
-  speed: 5
-  jumpSpeed: 4
-  gravity: 5
-  crouch: 0.25
-  walk: 5
-  run: 1
+  speed: 50
+  jumpSpeed: 50
+  gravity: 20
+  crouch: 2.5
+  walk: 50
+  run: 10
 --- !u!143 &1164386668
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1218,7 +1192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164386662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77cf954262f2e874a808584c82e0c358, type: 3}
+  m_Script: {fileID: 11500000, guid: 45317a508f3b7f546a3539f3d44bd5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 0
@@ -1235,7 +1209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164386662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc5f5169c804cc4c9898bc512516ed9, type: 3}
+  m_Script: {fileID: 11500000, guid: 987cf586c6637254ab7daabd99a36f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1228265100 stripped
@@ -1807,7 +1781,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2019029799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77cf954262f2e874a808584c82e0c358, type: 3}
+  m_Script: {fileID: 11500000, guid: 45317a508f3b7f546a3539f3d44bd5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 0
@@ -1828,7 +1802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62ca1d9344986da4c9a8eb5f3155b216, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62ca1d9344986da4c9a8eb5f3155b216, type: 3}
       propertyPath: m_LocalPosition.x
