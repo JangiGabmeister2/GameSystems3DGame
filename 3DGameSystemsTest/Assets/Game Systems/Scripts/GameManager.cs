@@ -32,6 +32,41 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameStates.GameState;
     }
+
+    private void Update()
+    {
+        switch (gameState)
+        {
+            case GameStates.MenuState:
+                if (Cursor.visible == false)
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                break;
+            case GameStates.GameState:
+                if (Cursor.visible == true)
+                {
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                break;
+            case GameStates.DeathState:
+                if (Cursor.visible == true)
+                {
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                break;
+            default:
+                if (Cursor.visible == true)
+                {
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                break;
+        }
+    }
 }
 
 public enum GameStates

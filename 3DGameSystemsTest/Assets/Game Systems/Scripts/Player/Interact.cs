@@ -28,8 +28,14 @@ public class Interact : MonoBehaviour
             #region NPC tag
             if (_hitInfo.collider.tag == "NPC") //and that hits info is tagged NPC
             {
-                //Debug that we hit a NPC 
-                Debug.Log("That's an NPC");
+                //check if you have the script
+                if (_hitInfo.collider.GetComponent<DialogueManager>())
+                {
+                    //show the dialogue UI
+                    _hitInfo.collider.GetComponent<DialogueManager>().showDialogue = true;
+                    //change game state
+                    GameManager.GameManagerInstance.gameState = GameStates.MenuState;
+                }
             }            
             #endregion
             #region Item
