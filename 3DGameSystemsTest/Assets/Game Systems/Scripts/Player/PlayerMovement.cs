@@ -4,6 +4,7 @@ using UnityEngine;
 
 [AddComponentMenu("Game Systems/Player/Movement")]
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(MenuHandler))]
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 50f, gravity = 20f, crouch = 2.5f, walk = 50f, run = 10f;
 
     #endregion
+    private MenuHandler _menu;
 
     void Start()
     {
@@ -46,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
             moveDir.y -= gravity * Time.deltaTime;
             _charC.Move(moveDir * Time.deltaTime);
             #endregion
+        }
+
+        if (Input.GetButton("Escape"))
+        {
+            GameManager.GameManagerInstance.gameState = GameStates.MenuState;
+            _menu.ChangeScene(1);
         }
     }
 }
