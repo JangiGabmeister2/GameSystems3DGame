@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.09
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 27a7d0b91c7dbbf4592ec5222c0518cd, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5679a6d19b818ac4183d58be33e66495, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 118823782}
   m_IndirectSpecularColor: {r: 0.71883804, g: 0.6523796, b: 0.6194375, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -217,6 +217,7 @@ Transform:
   m_LocalRotation: {x: -0.30642623, y: 0.16702393, z: -0.14667517, w: -0.9255768}
   m_LocalPosition: {x: 1095, y: -726, z: 1487}
   m_LocalScale: {x: 0.94529, y: 0.94529, z: 0.94529}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1021051322}
   m_RootOrder: 0
@@ -471,6 +472,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 552.80975, y: 101.492645, z: 188.82863}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -711,6 +713,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -759,9 +762,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 581.9, y: 100.89, z: 178.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021051319
 GameObject:
@@ -791,7 +795,7 @@ TerrainCollider:
   m_GameObject: {fileID: 1021051319}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 86f5148c15b0f1047a09b734fa676d97, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: c8e9a2cbf7a63cd4ca7b7f30020a8440, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &1021051321
 Terrain:
@@ -802,7 +806,7 @@ Terrain:
   m_GameObject: {fileID: 1021051319}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 86f5148c15b0f1047a09b734fa676d97, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: c8e9a2cbf7a63cd4ca7b7f30020a8440, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 300
   m_TreeCrossFadeLength: 0
@@ -816,6 +820,7 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
   m_BakeLightProbesForTrees: 1
@@ -836,6 +841,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -50, z: 0}
   m_LocalScale: {x: 1000, y: 1, z: 1000}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 118823783}
   - {fileID: 1449656306}
@@ -851,7 +857,7 @@ Transform:
   - {fileID: 1702642782}
   - {fileID: 1888211547}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1021051323
 Light:
@@ -1093,6 +1099,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1141,10 +1148,11 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.024146892, z: -0, w: -0.9997085}
   m_LocalPosition: {x: 583.2, y: 102.9, z: 169.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2019029802}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 357.233, z: 0}
 --- !u!114 &1164386667
 MonoBehaviour:
@@ -1155,16 +1163,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164386662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1c87f69d0eba04298c8f736f5647e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 307f4e8ede358634dabeef667604589a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDir: {x: 0, y: 0, z: 0}
-  speed: 50
-  jumpSpeed: 50
-  gravity: 20
-  crouch: 2.5
-  walk: 50
-  run: 10
 --- !u!143 &1164386668
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1192,7 +1193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164386662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45317a508f3b7f546a3539f3d44bd5c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7555193beb06ffc4b982df58a35e5c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 0
@@ -1209,9 +1210,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164386662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987cf586c6637254ab7daabd99a36f16, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c7e4bac99ee1a94880840a821f0c3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDir: {x: 0, y: 0, z: 0}
+  speed: 50
+  jumpSpeed: 50
+  gravity: 20
+  crouch: 2.5
+  walk: 50
+  run: 10
 --- !u!4 &1228265100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a5e7028fb55633a4887688fc6d625822, type: 3}
@@ -1550,6 +1558,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1598,9 +1607,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 583.74, y: 100.35, z: 179.18}
   m_LocalScale: {x: 0.54100835, y: 0.54100835, z: 0.54100835}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1896691904
 Rigidbody:
@@ -1768,6 +1778,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1164386666}
   m_RootOrder: 0
