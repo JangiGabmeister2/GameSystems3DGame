@@ -16,7 +16,7 @@ public class MouseLook : MonoBehaviour
     [Header("Rotation")]
     public RotationalAxis axis = RotationalAxis.MouseX;
 
-    //[Header("Sensitivity")]
+    [Header("Sensitivity")]
     public Vector2 sensitivity = new Vector2(10,10);
     [Range(-100, 100)]
     
